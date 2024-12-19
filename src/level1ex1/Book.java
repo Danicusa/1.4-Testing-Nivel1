@@ -1,4 +1,4 @@
-package tascas104level1ex1;
+package level1ex1;
 
 import java.util.Objects;
 

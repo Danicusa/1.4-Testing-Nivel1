@@ -1,11 +1,11 @@
-package tascas104level1ex1tests;
+package level1ex1tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import tascas104level1ex1.Book;
-import tascas104level1ex1.Library;
+import level1ex1.Book;
+import level1ex1.Library;
 
 public class NoDuplicateBooksTest {
 
@@ -13,9 +13,9 @@ public class NoDuplicateBooksTest {
 	public void noDuplicateBooksTest() {
 		Library lib1 = new Library();
 		
-		lib1.addNewBookToCollection();
-		lib1.addNewBookToCollection();
-		lib1.addNewBookToCollection();
+		lib1.addNewBookToCollection("Don Quijote","Altamira");
+		lib1.addNewBookToCollection("Don Quijote","Altamira");
+		lib1.addNewBookToCollection("Pinocho","Altamira");
 			
 		assertEquals(2, lib1.bookCollection.size(),"The list should only have 2 books in it");
 		

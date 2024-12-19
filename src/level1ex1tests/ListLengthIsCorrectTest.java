@@ -1,10 +1,10 @@
-package tascas104level1ex1tests;
+package level1ex1tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import tascas104level1ex1.Library;
+import level1ex1.Library;
 
 class ListLengthIsCorrectTest {
 
@@ -13,9 +13,9 @@ class ListLengthIsCorrectTest {
 		
 		Library lib1 = new Library();
 		
-		lib1.addNewBookToCollection();
-		lib1.addNewBookToCollection();
-		lib1.addNewBookToCollection();
+		lib1.addNewBookToCollection("Pinocho", "Altamira");
+		lib1.addNewBookToCollection("Don Quijote", "Altamira");
+		lib1.addNewBookToCollection("El código Da Vinci", "Doubleday");
 		
 		assertEquals(3, lib1.bookCollection.size(), "The book collection size should be 3");
 	}

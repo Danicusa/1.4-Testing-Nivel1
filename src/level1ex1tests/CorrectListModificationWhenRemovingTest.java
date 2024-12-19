@@ -1,10 +1,10 @@
-package tascas104level1ex1tests;
+package level1ex1tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import tascas104level1ex1.Library;
+import level1ex1.Library;
 
 class CorrectListModificationWhenRemovingTest {
 
@@ -12,11 +12,11 @@ class CorrectListModificationWhenRemovingTest {
 	public void deleteBookByTittleTest() {
 		Library lib1 = new Library();
 		
-		lib1.addNewBookToCollection();
-		lib1.addNewBookToCollection();
+		lib1.addNewBookToCollection("1984", "Secker & Warburg");
+		lib1.addNewBookToCollection("El código Da Vinci", "Doubleday");
 		assertEquals(2, lib1.bookCollection.size());
 		
-		lib1.deleteBookByTittle();
+		lib1.deleteBookByTittle("1984");
 		assertEquals(1, lib1.bookCollection.size());
 	}
 }

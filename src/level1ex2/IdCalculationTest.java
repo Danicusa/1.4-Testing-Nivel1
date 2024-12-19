@@ -1,4 +1,4 @@
-package tascas104level1ex2;
+package level1ex2;
 
 import static org.junit.jupiter.api.Assertions.*;
 

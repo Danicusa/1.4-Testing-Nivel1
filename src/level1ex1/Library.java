@@ -1,4 +1,4 @@
-package tascas104level1ex1;
+package level1ex1;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,8 +14,8 @@ public class Library {
 		bookCollection = new ArrayList<Book>();
 	}
 	
-	public void addNewBookToCollection() {
-		Book book1 = newBook();
+	public void addNewBookToCollection(String title, String editorial ) {
+		Book book1 = new Book(title, editorial);
 		
 	    if (!this.bookCollection.contains(book1)) {
 	        this.bookCollection.add(book1);
@@ -26,7 +26,7 @@ public class Library {
 
 	}
 	
-	public Book newBook() {
+	/*public Book newBook() {
 		String title = "";
 		String editorial = "";
 		int isbn = 0;
@@ -38,8 +38,8 @@ public class Library {
 		
 		Book book1 = new Book(title, editorial);
 		
-		return book1;
-	}
+		return book1;*/
+	
 	
 	public void collectionRecover() {
 	    for (Book book : this.bookCollection) {
@@ -52,17 +52,16 @@ public class Library {
 		System.out.println(bookCollection.get(position).toString());
 	}
 	
-	public void addBookToAPosition(int position) {
+	public void addBookToAPosition(int position, String title, String editorial) {
 		
-		bookCollection.add(position, newBook());
+		Book book1 = new Book(title, editorial);
+		
+		bookCollection.add(position, book1);
 	}
 	
-	public void deleteBookByTittle() {
-		String title = "";
+	public void deleteBookByTittle(String title) {	
 		int index = -1;
-		System.out.println("Enter the book title that has to be deleted");
-		title = sc.next();
-		
+
 		index = getBookIndex(title);
 		
 		if(index > -1) {

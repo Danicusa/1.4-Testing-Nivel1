@@ -1,10 +1,10 @@
-package tascas104level1ex1tests;
+package level1ex1tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import tascas104level1ex1.Library;
+import level1ex1.Library;
 
 class NotNullListWhenCreatingLibraryTest {
 

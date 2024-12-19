@@ -1,9 +1,8 @@
-package tascas104level1ex2;
+package level1ex2;
 
 public class main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		IdCalculation id1 = new IdCalculation("12345678");
 		IdCalculation id2 = new IdCalculation("87654321");
